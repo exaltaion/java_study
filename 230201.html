@@ -1,0 +1,404 @@
+<!doctype html>
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-71GCQDLZV9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71GCQDLZV9');
+</script>
+
+<title>Web1 - 학습일지</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/63d498ee474251287910107e/1gnr7ap4h';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+
+    <ol>
+      <li><a href="230201.html">230201</a></li>
+      <li><a href="230130.html">230130</a></li>
+      <li><a href="3.html">Java</a></li>
+      <li><a href="4.html">정보처리기사</a></li>
+      <li><a href="5.html">Python</a></li>
+</ol>
+<div id="article">
+<h2>230201 학습일지</h2>
+<p>
+    1. 학원 강의
+      가. 아침 퀴즈
+        1) 마음이 급해서 문제에 답을 정확히 작성하지 못함
+        2) 문제해결 방법에 다양한 방법이 있기 때문에 다른 사람들이 풀어 놓은 것을 보는것도 도움이 많이 되는것 같다.
+        3) 리마인드 측면에서도 좋은 방법인것 같다. 
+        4) 파이(3.14) 관련하여 Math.pi를 쓰면 된다는 생각을 하였으나 뒤에 소수점 3자리 절삭해서 구현할 방법이 기억이 나지 않았다.
+     나. 출력쪽 타입변환
+        1)		int p1 = 100;              //정수 타입 p1이 선언 되었으며, 값 100이 저장됨
+		double p2 = 10.99;         //실수 타입 p2가 선언 되었으며, 값 10.99가 저장됨
+		boolean p3 = true;         //논리
+		char p4 = 'T';             //84를 의미하는 문자 타입 p4가 선언 되었으며, 값 T(84)가 저장됨
+		String p5 = "입니다.";
+		String p6 = "200";
+		System.out.println(p1+p2); //100+10.99=110.99가 될 예정
+		System.out.println(p2);
+		System.out.println(p3);
+		System.out.println(p4+5);//'T'(84)+5=89
+		                         //정수형(문자)+정수형
+		                         //char+int=int(int값이 더 크기 때문임)
+		                         //
+		System.out.println(p5+10);//오! 문자열과 만나면 문자열이 되어버림(블랙홀 같음)
+		System.out.println(p1+p5);//100+"입니다."
+		System.out.println(p3+p5);//ture+"입니다."
+		System.out.println(p1+p6);//100+"200"
+		System.out.println(p1+p2+p6); //100+10.99+"200" 예측 110.99200
+		System.out.println(p6+p2+p1); //"200"+10.99+100 예측 200110.99 그러나 연산부터하나? 
+		                              //아니고 문자열화 됨 "20010.99"+100 = 20010.99100 오! 신기방기
+    다. 형변환
+        		
+		char chvalue2 = 'A';     //65를 의미
+		System.out.println((char)(chvalue2+5)); // 5더하면 70이 됨 5는 int 정수형이고 int(32비트)가 
+		                                // char(16비트)보다 더큰 형태로 변환됨
+		                                // 강제변환은 원하는 타입을 작성하고(반드시 앞에 붙이고)
+		                                // 뒤에 연산이 된 값에 반영이 되도록 작성하시면됩니다.
+		                                // 이렇게 하면 70 즉 F가 출력됩니다.
+										// 코딩테스트 = 컴퓨터적인 사고능력, 코딩, 알고리즘
+										// 코딩테스트 잘한다고 일을 잘하는것은 아님(맞지)
+		char chvalue3 = 'Z';  //90을 의미
+		System.out.println((char)chvalue3-chvalue2);
+		
+		int num1 = 123;	     //정수형
+		double num2 = 123.4; // 실수형
+		int num3 = num1 + (int)num2; // 연산 후에는 실수형으로 자동 형변환이 됨 그런데 인트 타입이라서 
+		                             // 오류가 발생(double로 타입을 변환해주던가, 앞에 int를 붙여서
+		                             // 강제 형변환을 하면 됩니다. 그결과 값은 소수점이 삭제된 정수)
+		System.out.println(num2 + num1);
+		System.out.println(num3);
+	//저장공간 123.4=123.4+123 해
+		
+		double num5 = 3.6;
+		double num6 = 5.5;
+		int result = (int)num5 + (int)num6;//반올림 하지 않음 절삭 될뿐 절상되는 개념은 아님(주의)
+		System.out.println(result);
+		int result2 = (int)(num5+num6);
+		System.out.println(result2 + "입니다."); // 연산 순서가 숫자를 먼더 더한 뒤에 정수형 표현, result는 정수형
+		                                         // 3, 5로 표현을 해주고 더하여서 8이 나온것이 아닐까? 맞네
+									             // 반올림 되는 개념이 아님, 입니다를 붙이면 문자열이됨
+		
+		String str1 = 10+20+"30";                //30+String30이 붙어서 3030예상됨
+		System.out.println(str1);
+		
+		String str2 = 10+"30"+20;                //10+String30이 붙어서 String 1030에 20이 붙어서 103020
+		System.out.println(str2);
+		
+		String str3 = "30"+10+20;                //String 30에 10이 붙어서 String 3010에 20이 붙어서 301020
+		System.out.println(str3);
+		
+		String str4 = "30"+(10+20);             //10+20 연산 이후에 String30에 30이 붙어서 3030
+		System.out.println(str4);
+		//숫자 - 100로 관리
+		//문자 - "100"으로 관리
+		
+		int intScore1 = 100;
+		String strScore1 = String.valueOf(intScore1);//이안에 있는것을 문자열로 바꿔준다는 뜻인데 뒤에 나옵니다
+		String strScore2 = intScore1 + "";
+		System.out.println(intScore1); //100이였다가 문자열 100이 되었습니다. valueOf()를 넣어서
+		System.out.println(strScore2); //"100" 클래스와 라이브러리 개념이 있고 이런것이 있구나 정도만 이해
+
+		String strScore3 = "80";
+		String strScore4 = String.valueOf(90); //"스트링닷벨류오브"문자열로 변신!
+		System.out.println(strScore3 + strScore4);
+		int intScore5 = Integer.parseInt(strScore3);  //안에 있는 값을 숫자형(정수형의미)으로 바꿔주는 역할을 함
+		int intScore6 = Integer.parseInt(strScore4);  //"Integer.parseInt()" 숫자형 중에 정수형만을 의미하는지?
+		                                              //"인티저닷파스인트"
+		System.out.println(intScore5+intScore6);
+		
+		int totalScore = intScore1 + intScore5 + intScore6;
+		String strTotalScore = String.valueOf(totalScore);
+		System.out.println(totalScore);
+		System.out.println(strTotalScore);
+		
+		double dbGrade1 = 3.5;
+		String strGrade1 = "3.5";
+		
+		double dbGrade2 = Double.parseDouble(strGrade1); //안에 있는 값을 숫자형(실수형)으로 바꿔줌
+                                                 		 //주의사항은 숫가 같은 모양이어야함
+														 //"더블닷파스더블"
+
+		String strGrade2 = String.valueOf(dbGrade1);
+		System.out.println(dbGrade2);
+		System.out.println(strGrade1);
+		
+		boolean bl = true;
+		String strBl = String.valueOf(bl);				//valueOf V는 대문자가 아니야
+
+		String strBl2 = "false";
+		boolean bl2 = Boolean.parseBoolean(strBl2);     //"블린닷파스블린()"은 논리형으로 바꿔줌
+		System.out.println(strBl);						//parse 사전적의미는 분석하다
+		System.out.println(bl2);						//"스트링닷벨류오브, 인티저닷파스인트, 더블닷파스더블, 블린닷파스블린"
+		                                                // string.valueOf()문자열, integer.parseInt()정수형, double.parseDouble()실수형, boolean.parseboolean()논리형
+														// 괄호안에 내용을 바꿔줌
+		//저장이 되는 과정에 대해서 생각해봅시다.
+		int num10 = 10;
+		int num20 = 20;
+		
+		int num30 = num10 + 10;
+		int num40 = num10 + num20;
+		int num50 = num10 + num20 + num20 + num20;
+		
+		num20 = num10+num20+30;
+		//60=10+20+30로 치환됨. 여기부터 num20은 60입니다.
+		
+		System.out.println("\"안녕\'하세요\""); //안녕하세요를 출력하고 싶어 \는 탈출의미
+		System.out.println("이스\t케이프\n문자"); // \t는 텝 효과, \n엔터 효과
+
+      라. 연산자
+      // 연산자에 대해서 알아보겠습니다.
+      int n = 100;  //100
+      int n2 = +n;  //100
+      int n3 = -n;  //-100
+      System.out.println("n2 : "+n2);
+      System.out.println("n3 : "+n3);
+      
+      int n4, n5;
+      n4 = +n3;  //-100
+      n5 = -n3;  //-100
+      System.out.println("n4 : "+n4);
+      System.out.println("n5 : "+n5); // -와 -가 만나면 +가 됩니다.
+      
+  
+      short s = 10;
+      //short s2 = -s;  //부호 연산자의 산출 타입은 int(정수형)이 된다. int가 short보다 작기때문에 오류표시
+      long l = -n;    // int(정수형)이 long보다 작기때문에 오류가 발생하지 않음
+      
+      // 증감연산자(++, --) 초반에 많이 햇갈립니다.
+      int x = 10;
+      int y = 10;
+      int z;
+      
+      System.out.println(x);//10
+      x++; // 1을 더하겠다.
+      ++x; // 1을 더하겠다.
+      System.out.println(x);//12
+      
+      System.out.println(x++);//12 여기에서 프린트되지 않지만 13이 되어 있음
+      System.out.println(x);
+      System.out.println(++x);//14
+      
+      System.out.println(y); //10
+      y--; //1을 빼겠다
+      --y; //1을 빼겠다  //y=7
+      System.out.println(y);   //8
+      System.out.println(--y); //7
+      System.out.println(y--); //7이 표현되고 -1이 되어 6인 상태
+      System.out.println("여기서 y값은 : "+y);
+      //x=14
+      z =  x++;  //15인 상태
+      System.out.println("x="+ x +" z="+z); //x는 변경된 수가 적용이 되고, z는 적용되기 전 숫자가 표현
+      z = ++x;   //x는 15인 상태에서 +1이 되고
+      System.out.println("x="+ x +" z="+z); //
+      //x=16, y=6
+      z = ++x + --y; //x=17, y=5, z=22
+      System.out.println("여기서 x값은 : "+ x);
+      System.out.println("여기서 y값은 : "+ y);
+      System.out.println("여기서 z값은 : "+ z);
+      System.out.println("x="+ ++x+" y="+ y++ +" z="+ --z); //x는+1해서 18, y는 5인데 6이고, z는 22-1=21?
+      
+      System.out.println("x="+ x +" y="+ y +" z="+ z);
+
+      boolean running = true;
+      System.out.println("논리 부정 연산자! : "+!running); //
+      boolean walking = false;
+      System.out.println("논리 부정 연산자! : "+!walking); //
+      running = !running; // !true 니까 false
+      
+      
+      int xx = 10;
+      int yy = 4;
+      
+      System.out.println(xx+yy);
+      System.out.println(xx-yy);
+      System.out.println(xx*yy);
+      System.out.println(xx/yy);
+      System.out.println(xx%yy);
+      
+      double a = 10;
+      double b = 4;
+      System.out.println(a/b);//실수형 10 / 실수형 4  이것은 int형과 다른 실수형이기 때문에 정확한 값이 나옴
+      System.out.println(xx/yy);//정수형 10 / 정수형4
+      System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+      System.out.println((double)xx/yy);
+      System.out.println(xx/(double)yy);
+      System.out.println((double)xx/(double)yy);
+      System.out.println(a/yy);
+      System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+      System.out.println("(double)정수형10/정수형4 : "+(double)(xx/yy));//이렇게 하면 결과가 다르게 나옴 왜냐하면 ??
+      
+      //double / int = double
+      // int / double = double 큰 수로 형변환 됨
+      System.out.println(10.0/4.0);
+      System.out.println(10.0/4);
+      System.out.println(10/4.0);
+      
+      //비교연산자에 대해서 알아보겠습니다. 오른쪽에것을 왼쪽과 비교합니다.
+      
+      int num1 = 5;
+      int num2 = 3;
+      
+      System.out.println(num1 == num2);
+      System.out.println(num1 != num2);
+      
+      boolean bl1 = !(num1 > num2);     //true 5>3
+      boolean bl2 = num1 <= num2;    // false 5<=3
+      boolean bl3 = num1 < num2 + 10;//true 5<3+10
+      
+      System.out.println("바뀌나요 : " + bl1);
+      System.out.println(bl2);
+      System.out.println(!bl3);
+      System.out.println(bl3);
+      
+      System.out.println(!((9/3)==(10%7)));
+      //                      3 ==  3
+      //String 도 같은지 다른지 비교
+      // == equals
+      //String 문자열
+      String s1 = "hello";
+      String s2 = "hello";
+      String s3 = new String("hello"); //별도로 new로 다른 방에 생성 되었다는 의미 
+      
+      System.out.println("문자열 비교 : "+ s1 == s2);
+      //문자열.equals(문자열)
+      System.out.println("equals를 활용한 문자열 비교 : "+ s1.equals(s2));  //안에 있는 문구가 같냐?를 묻는것임
+      System.out.println("연산자 ==를 활용한 문자열 비교 : " + s1==s3);     //이건 왜 출력안되지
+      System.out.println("equals를 활용한 문자열 비교 : "+ s1.equals(s3));
+      
+      System.out.println((10==10) && (20==20)); //and연산자이기 때문에 좌측도 참, 우측도 참이기 때문에 true
+      
+      boolean result;
+      result = (10==10) && (20==20); //and연산자이기 때문에 둘다 참이기 때문에 참입니다.
+      System.out.println(result);
+      
+      result = (5>3) && (6<4); //and연산자이기 때문에 둘중에 하나가 f이기 때문에 f입니다.
+      //        t     && f
+      System.out.println(result);
+      
+      result = (10>20) || (1>0);   // or 연산자 이기 때문에 둘중에 하나가 참이면 참입니다.
+      //          f          t
+      System.out.println(result);
+      
+      //이항 연산자 중 대입 연산자는 가장 늦은 우선 순위 입니다. 앞에 것을 모두 수행하고 =이라고 생각하면됨,
+
+      마. 대입연산자
+      int num1 = 100; // 정수형 타입의 num1을 선언하고 100을 저장하여 초기화하였습니다.
+      int num2, num3; // 정수형 타입의 num2, num3을 선언하였습니다.
+      
+      num2 = num3 = 200;
+      System.out.println(num1);
+
+      num1 += 50; //앞에 있는 +대로 수행하고 그 결과를 저장하겠습니다.
+                  //num1 = num1 + 50;
+      System.out.println("num1 += 50 : "+num1);
+
+      num1 -= 30; //num1 = num1 - 30;
+      System.out.println("num1 -= 30 : "+num1);
+
+      num1 *= 2;  //num1 = num1 *2의 결과값을 저장하겠습니다.
+      System.out.println("num1 *= 2 : "+num1);
+
+      num1 /= 50.0; //num1 = num1 /60 결과값을 저장하겠습니다.
+                  // 만약에 60.0
+      System.out.println("num1 /= 50.0 : "+num1);
+
+      num1 %= 3;  //num1 = num1 %3의 결과값을 저장하겠습니다.
+      
+      System.out.println("num1 %= 3 : "+num1);
+      
+      //삼항 연산자에 대해서 알아보겠습니다.
+      int score = 97;
+      char grade = (score > 90) ? 'A' : 'B'; //91이면 65가 나오고 66이 나오는데 왜지?
+                                            //int 정수형으로 바꾸면 A의 유니코드 값인 65가 저장되기 때문
+      //           조건식       ? 값  : 값 , 참이면 앞부분만 남아서 값이 저장됨 
+      //                                     거짓이면 뒷부분만 남아서 저장됨
+      // 중첩을 해서 사용할 수 있음, 
+      System.out.println("A와 B만 존재하는 곳 : "+grade);
+      
+      char grade2 = (score > 90) ? 'A' : (score >80 ? 'B' : 'C');
+      // 90보다 크면 A고 나머지는 다 B
+      // 90보다 크면 A고 나머지는 80보다 크면 B 그 외에는 C
+      // score 가 83이면, 90보다 큰가? 거짓 B수행, 82가 80보다 큰가 참 B로 저장
+      // score 가 75이면, 90보다 큰가? 거짓 B수행, 75는 80보다 큰가? 거짓 C수행
+      // 95보다 클때 s
+      System.out.println("A와 B, C가 존재하는 곳 : "+grade2);
+
+      char grade3 = (score > 95) ? 'S' : (score > 90 ? 'A' : (score >80 ? 'B' : (score > 70 ? 'C' : 'D')));
+      System.out.println("A부터 D까지 존재하는 곳 : "+grade3);
+      
+      char grade4 = (score >95) ? 'S' : 'A';
+      char grade5 = (score >95) ? 'S' : (score >90 ? 'A' : 'B');
+      char grade6 = (score >95) ? 'S' : (score >90 ? 'A' : (score >80 ? 'B' : 'C'));
+      char grade7 = (score >95) ? 'S' : (score >90 ? 'A' : (score >80 ? 'B' : (score >70 ? 'C' : 'D')));
+      char grade8 = (score >95) ?  'S': (score >90 ? 'A' : (score >80 ? 'B' : (score >70 ? 'C' : (score >60 ? 'D' : 'F'))));
+      System.out.println("A부터 F까지 존재하는 곳 grade8 : "+grade8);
+      //마지막에 S를 잘했어!라고 나오게 싶은데 char 정수형인데 단어만 구만 인식하고 절은 인식 못하고, String도 오류가 뜨는데 ??왜이런가요?
+      //답은 String 으로 타입을 바꿔주고 ''를 ""로 모두 바꿔주면 됩니다.
+
+    2. 학원 2일차
+      가. 백신 프로그램 설치
+      나. 자바 버전 다운그레이드
+      다. utf-8 버전 정보 확인
+      라. pdf 뷰어 설치
+      마. 출력쪽 형변환
+      바. 연산자
+
+    3. 정보처리기사 네이버 카페 가입
+      가. 핵심요약 자료 신청
+      나. 기출 문제풀이
+      다. 
+      라. 
+    4. 방과 후
+      가. 이것이 자바다 관련 파일 다운로드 및 페키지 설치
+      나. 정보처리기사 필기시험 정보수집(해야할 공부는 안하고)
+</p>
+</div>
+</div>
+<p>
+    <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web1-i8cz6iz16u.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
+<input type="checkbox">
+
+</body>
+</html>
+
